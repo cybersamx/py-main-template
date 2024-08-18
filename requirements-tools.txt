@@ -1,0 +1,4 @@
+build~=1.2      # For building distribution package
+flake8~=7.1     # Python linter
+freezegun~=1.5  # Useful utility for testing datetime
+twine~=5.1      # Upload distro packages to index servers

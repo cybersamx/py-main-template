@@ -1,0 +1,26 @@
+# Rules to ignore.
+#
+# E501 = line length >= 90. We have comments that include links to ref doc that are > 90.
+# W503 = line break before binary operator. WTH! W503 contradicts with W504. See below.
+# W504 = line break after binary operator.
+#
+# According to https://www.flake8rules.com/rules/W503.html
+# This is bad:
+# income = (gross_wages
+#           + taxable_interest)
+# But according to https://www.flake8rules.com/rules/W504.html
+# This is good:
+# income = (gross_wages
+#           + taxable_interest)
+#
+# So excluding both W503 and W504.
+
+[flake8]
+ignore = E501,W503,W504
+exclude =
+  .git,
+  __pycache__,
+  docs,
+  build,
+  dist,
+  .venv
