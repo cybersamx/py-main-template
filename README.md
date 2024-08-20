@@ -1,6 +1,6 @@
-# Python Template
+# Python Main Program Template
 
-A python template that we can use to create a new project for the development and publication of a python package named `cybersamx_test` to Test PyPi.
+A python template that we can use to create a new project for the development of python main program.
 
 ## Setup
 
@@ -38,17 +38,16 @@ If you open this project in PyCharm, perform the following setup on the IDE to o
    $ python -m pytest tests
    ```
 
-### Publish to Test PyPi
+### Run Program
 
-1. Change the project name in `pyproject.toml`, otherwise we will get a name collision as the name has already been taken.
-1. Make sure that the version in `pyproject.toml` is correct.
-1. Run the command to build and publish the package.
+1. Run the command to run the project.
 
    ```shell
-   make publish
+   make run
+   # Alternatively via file arg
+   python src/cybersamx_main/__main__.py
+   # Alternatively via module arg
+   cd src
+   python -m cybersamx_main
+   cd -
    ```
-   
-> **Notes**
-> 
-> The project is set up for Test PyPi. Make the appropriate changes to publish the package to PyPi.
-

@@ -2,7 +2,7 @@ import math
 import unittest
 from dataclasses import dataclass
 
-from cybersamx_test.stats import mean
+from cybersamx_main.stats import mean
 
 
 @dataclass
@@ -13,7 +13,7 @@ class StatsTestCase:
 
 def compare(a: float, b: float) -> bool:
     epsilon = 0.00001
-    return math.fabs(a-b) < epsilon
+    return math.fabs(a - b) < epsilon
 
 
 class TestStats(unittest.TestCase):
